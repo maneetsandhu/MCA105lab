@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    vector<string> words = {"Banana", "apple", "Cherry", "mango", "Date"};
+
+    sort(words.begin(), words.end()); // uses default lexicographic comparison
+
+    cout << "Sorted strings:" << endl;
+    for (const string& w : words)
+        cout << w << endl;
+
+    return 0;
+}

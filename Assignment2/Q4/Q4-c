@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+bool isVowel(char ch) {
+    ch = tolower(ch);
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+}
+
+string removeVowels(const string& str) {
+    string result = "";
+    for (char ch : str) {
+        if (!isVowel(ch))
+            result += ch;
+    }
+    return result;
+}
+
+int main() {
+    string str = "Data Structures and Algorithms";
+
+    cout << "Original string: " << str << endl;
+    cout << "After removing vowels: " << removeVowels(str) << endl;
+
+    return 0;
+}

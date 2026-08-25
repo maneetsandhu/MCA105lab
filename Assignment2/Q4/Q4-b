@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+string reverseString(string str) {
+    int left = 0, right = (int)str.length() - 1;
+    while (left < right) {
+        swap(str[left], str[right]);
+        left++;
+        right--;
+    }
+    return str;
+}
+
+int main() {
+    string str = "DataStructures";
+
+    cout << "Original string: " << str << endl;
+    cout << "Reversed string: " << reverseString(str) << endl;
+
+    return 0;
+}
